@@ -16,37 +16,11 @@ namespace MiniProject_API.Controllers
             _logger = logger;
         }
 
-        // GET: api/<PersonController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<PersonController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/<PersonController>
         [HttpPost]
         public void Post([FromBody] AddressModel value)
         {
             _logger.LogInformation("Our Info is {Info}", value);
-        }
-
-        // PUT api/<PersonController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<PersonController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
